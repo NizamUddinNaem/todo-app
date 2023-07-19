@@ -1,0 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+    background: linear-gradient(135deg, #FF4E50, #F9D423);
+}
+
+.todo-app {
+    background: #FFF;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 560px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+}
+
+.todo-app h1 img {
+    width: 30px;
+    margin-left: 15px;
+}
+
+.todo-app h1 {
+    color: #021B79;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin-bottom: 20px;
+}
+
+.row {
+    background: #eee;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+.row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.row button {
+    border: none;
+    outline: none;
+    color: #FFF;
+    background: #ff4945;
+    padding: 16px 50px;
+    border-radius: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+ul.list-container li {
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    font-weight: bold;
+    position: relative;
+}
+
+ul.list-container li::before {
+    content: '';
+    background-image: url(img/unchecked.png);
+    position: absolute;
+    border-radius: 50%;
+    /* background: #000; */
+    width: 28px;
+    height: 28px;
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+
+ul.list-container li.checked{
+    color: #555;
+    text-decoration: line-through;   
+}
+
+ul.list-container li.checked::before{
+    background-image: url(img/checked.png);
+}
+
+ul.list-container li.span{
+    font-size: 20px;
+}
+
+ul#list-container li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    /* background: #eee; */
+    text-align: center;
+    border-radius: 50%;
+    color: #555;
+    line-height: 40px;
+}
+
+ul#list-container li span:hover{
+    background-color: #edeef0;
+    transition: .3 s;
+}
+
+
+@media(max-width: 500px){
+    .row button {
+        border: none;
+        outline: none;
+        color: #FFF;
+        background: #ff4945;
+        padding: 16px 25px;
+        border-radius: 40px;
+        font-size: 16px;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-left: -25px;
+    }
+}
